@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablolar</title>
+</head>
+
+<body>
+    <h2>Memleketler</h2>
+
+    <!-- border css ile yapılmalı burada geçici kullandık  -->
+    <table border="2">
+        <tr>
+            <th rowspan="4">TÜRKİYE</th> <!-- row dikey yayılır -->
+            <th>
+                Plaka
+            </th> <!--table heading / başlık-->
+            <th>
+                Şehir
+            </th>
+            <th>
+                Neyiyle Meşhur?
+            </th>
+            <th>
+                Bölgesi
+            </th>
+            <th>
+                Denizi Var Mı?
+            </th>
+        </tr> <!--table row /satır -->
+        <tr>
+            <td>60</td>
+            <td>Tokat</td>
+            <td>Tokat Yaprağı</td>
+            <td>Karadeniz Bölgesi</td>
+            <td>Yok ama kelkit çayı var</td>
+        </tr>
+        <tr>
+            <td>55</td>
+            <td>Samsun</td>
+            <td>Bafra Pidesi</td>
+            <td>Karadeniz Bölgesi</td>
+            <td>Var</td>
+        </tr>
+        <tr>
+            <td>35</td>
+            <td>İzmir</td>
+            <td>Boyoz</td>
+            <td>Ege</td>
+            <td>Var</td>
+        </tr>
+    </table>
+
+    <h2>Filmler</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Film Adı</th>
+                <th>Yıl</th>
+                <th>Puan</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Kaybedenler Kulübü</td>
+                <td>2011</td>
+                <td>7,5</td>
+            </tr>
+            <tr>
+                <td>The Godfather</td>
+                <td>1972</td>
+                <td>9,2</td>
+            </tr>
+            <tr>
+                <td>Babam ve Oğlum</td>
+                <td>2005</td>
+                <td>8,2</td>
+            </tr>
+            <tr>
+                <td>Cars</td>
+                <td>2006</td>
+                <td>7,2</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="2">Ortalama Puan</th> <!-- columndan geliyor, hücreye yatay yayılma -->
+                <th>8,025</th>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+
+</html>
