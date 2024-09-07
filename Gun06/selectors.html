@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Selectors</title>
+
+  <style>
+    /* element */
+    h1 {
+
+      text-transform: uppercase;
+      /* türkiyeyi büyük gösterdi yani h1i etkiledi */
+      letter-spacing: 5px;
+      /* harflerin arasını açtı */
+    }
+
+    /* CLASS. classları yazarken classa veridiğimiz adı başına nokta koyarak yazıyoruz. favori classına sahip olanları etkileyen bi tasarım yapıyoruz*/
+    .favori {
+      border-left: 10px solid #007AFF;
+
+    }
+
+    /* id. idleri yazarken başına # koyuyoruz. classlarda . nokta koyuyoruz */
+    #memleket {
+      text-align: center;
+
+    }
+
+    /* id */
+    /* kelimenin sonuna gelmesi için after yazdık. after sözde elementtir. */
+    #memleket::after {
+      content: "(OTOPARK)";
+
+      font-weight: bold;
+
+    }
+
+    /* immediate child, divin doğrudan çocuğu, child selector */
+    div>p {
+      margin: 0 60px;
+      /* 0 yukarı aşağı, 60 sağ soldan */
+      text-align: justify;
+      /* sağa sola eşit olacak şekilde yasladık */
+      font-size: 80%;
+    }
+
+
+    div p {
+      /* div ile p arasına boşluk koyunca tek bir p'yi değil div'in torunları olan p'leri de etkiliyor.*/
+      font-family: "Comic Sans MS";
+    }
+
+    h1,
+    h2 {
+      /* hem h1 hem h2 etkilenir. birden fazla element için arasına virgül koyuyoruz */
+      background-color: black;
+      color: white;
+      /* Türkiye yazan satırın tamamını değil sadece kelimenin arka planını siyah yapmak istiyorum */
+    }
+
+    /* attribute selecor, tüm title attributelarını etkiler */
+    [title] {
+      background-color: yellow;
+    }
+
+    li[title] {
+      /* sadece title attribute'u içeren li ögelerine etki eder */
+      font-style: italic;
+    }
+
+    h2+p {
+      text-indent: 40px;
+      /* bu özellik paragrafın içeri girdi yapmasını sağlar. h2+p ile de iki p'yi değil sadece h2den sonra gelen p'yi etkiledik */
+    }
+
+    /* nth child, ...ıncı ögeleri seçer. odd tek anlamına gelir tek sayıda ilerler. odd ya da 2n+1 ile tek sayıları seçtirebiliriz.*/
+    li:nth-child(odd) {
+      background-color: gainsboro;
+    }
+
+    /* 6. çocuk nasıl seçilir */
+    li:nth-child(6) {
+      text-transform: uppercase;
+      font-weight: bold;
+      text-align: center;
+      font-style: italic;
+      font-family: arial;
+      letter-spacing: 2px;
+      text-shadow: 1px 1px red;
+      color: rgb(75, 75, 218);
+    }
+  </style>
+
+</head>
+
+<body>
+  <h1>TÜRKİYE</h1>
+  <h2>Kütahya</h2>
+  <p>Kütahya (Latince: Cotyaeum), Ege Bölgesi'nde yer alan Kütahya ilinin merkezi olan şehirdir. Kütahya bölgesi, kuzey
+    ve batıdaki yüksek dağ sırtlarında doruğa ulaşan tarım arazileri ile geniş bir yamaç alanına sahiptir.</p>
+  <p>Kuruluş tarihi kesin olarak tespit edilememekle beraber, tarihi MÖ 3000 yıllarına uzanmaktadır. Eski kaynaklara
+    göre, Kütahya'nın antik çağlardaki adı Kotiaeon, Cotiaeum ve Koti şeklinde geçmektedir. İl topraklarına yerleşen en
+    eski halk Friglerdir. </p>
+
+  <div>
+    <p>
+      Kütahya, Fatih Sultan Mehmed zamanında İshak Paşa'nın tayinine kadar bir vilayet olarak idare edildi ve o zaman
+      merkezi Ankara olan Anadolu Beylerbeyliği'ne bağlı bulundu. İshak Paşa 1451 senesinde Karaman ve Menteşeoğulları
+      sıkıntılarını hallettikten sonra Kütahya'da kaldı ve bu tarihten itibaren 1826'da Anadolu Beylerbeyliği'nin
+      ortadan kaldırılmasına kadar Kütahya, Anadolu Beylerbeyliği'nin merkezi oldu.
+
+    </p>
+
+    <section>
+      <p>Kütahya <span title="reklam">porselen</span> sunar.</p>
+      <!-- sadece porselenin üstüne gelince title çıkması için span ile porseleni çevreledik. span olmayınca p'ye konan title tüm paragrafı etkiliyor -->
+    </section>
+
+  </div>
+
+
+  <h3>İlçeleri</h3>
+  <ul>
+    <li>Merkez</li>
+    <li>Altıntaş</li>
+    <li>Aslanapa</li>
+    <li title="Dikkat antik kent içerir">Çavdarhisar</li>
+    <li class="favori">Domaniç</li> <!-- class birden fazla elemana verilebilir, id tek elemana özel. -->
+    <li>Dumlupınar</li>
+    <li class="favori">Emet</li>
+    <li>Gediz</li>
+    <li>Hisarcık</li>
+    <li>Pazarlar</li>
+    <li>Simav</li>
+    <li>Şaphane</li>
+    <li id="memleket" class="favori">Tavşanlı</li>
+  </ul>
+</body>
+
+</html>
