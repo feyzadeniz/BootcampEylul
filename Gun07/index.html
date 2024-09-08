@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selectors 2</title>
+
+
+  <style>
+    .onemli+li {
+      border-left: 10px solid green;
+
+    }
+
+    .onemli~li {
+      /* onemli classından sonra gelen tüm li elementleri */
+      border-left: 10px solid;
+    }
+  </style>
+</head>
+
+<body>
+
+  <ul>
+    <li>Lorem, ipsum.</li>
+    <li>Ut, doloremque?</li>
+    <li class="onemli">Velit, eaque!</li>
+    <li>Animi, laborum!</li>
+    <li>Suscipit, odit!</li>
+    <li>Quam, veritatis.</li>
+    <li>Quisquam, impedit!</li>
+    <li>Asperiores, ab.</li>
+    <li>Voluptas, natus.</li>
+  </ul>
+
+</body>
+
+</html>
