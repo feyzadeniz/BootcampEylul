@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Model</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      /* sayfadaki tüm elementleri etkiler */
+    }
+
+    .kutu1 {
+      /* buraya box sizing border box eklediğimizde toplam element height kadar olur ve eklenen padding border değerleri içeriğe ayrılan alandan çalınır. yani artık içerik alanının yüksekliği değil her şey dahil toplam yükseklik heighta eşit */
+
+      background-color: yellow;
+      border: 10px solid green;
+      padding: 20px;
+      height: 200px;
+      /* içerik alanının yüksekliği */
+      width: 400px;
+      margin-top: 20px;
+    }
+
+    header {
+      background-color: pink;
+      margin-bottom: 20px;
+      /* alttan verilen boşluk ama borderın dışında */
+      text-align: center;
+      padding: 20px;
+      /* p20 tab */
+      border: 15px dashed orange;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- h1 ve p gibi elementlerin default bi padding değeri olur. header elementinde yok -->
+
+
+  <header>
+    HEADER HEADER <!-- header div gibidir. sayfanın tepe kısmına konan div'e denir. -->
+  </header>
+  <div class="kutu 1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur perferendis sequi quas
+    voluptatibus nulla cupiditate assumenda. Magni accusantium, eveniet nihil officiis fugit esse praesentium. Ipsam ad
+    deleniti adipisci rerum? Explicabo!</div>
+
+
+
+</body>
+
+</html>

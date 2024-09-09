@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kutu Mantığı</title>
+  <style>
+    /* div elementlerine aşağıdaki özellikleri taşıyacak şekilde css verin.
+    1. toplam yüksekliği 200 px
+    2. toplam genişliği 200px
+    3. arka plan rengi seç 
+    4. 20 px padding
+    5. 10px border
+    6. 15 px margin
+    7. yazı rengi beyaz*/
+
+    div {
+      box-sizing: border-box;
+      border: 10px solid;
+      padding: 20px;
+      margin: 15px;
+      background-color: skyblue;
+      width: 200px;
+      height: 200px;
+      text-align: center;
+      float: left;
+      /* kutular solda askıda kalarak yan yana geldi ama bunun dezavantajı borderın içinde durmuyorlar. borderın yüksekliği sıfır gibi göründü */
+      outline: 10px solid rgba(185, 185, 62, 0.678);
+      /* outline'ın hacmi yoktur, border gibi bir yüksekliği yoktur hesaplamaya dahil değildir ve border gibi diğer ögeleri itmez. */
+    }
+
+    main {
+      border: 10px solid;
+
+    }
+  </style>
+</head>
+
+<body>
+  <!-- div block element olduğu için kutular her satırda birer tane olacak şekilde yerleşti -->
+
+
+  <!-- block elementleri block olmayan bi element içine aldık -->
+  <main>
+    <div>kutu 1</div>
+    <div>kutu 2</div>
+    <div>kutu 3</div>
+    <div>kutu 4</div>
+    <div>kutu 5</div>
+    <div>kutu 6</div>
+    <div>kutu 7</div>
+    <div>kutu 8</div>
+    <div>kutu 9</div>
+    <div>kutu 10</div>
+  </main>
+</body>
+
+</html>
