@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Float Layout</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    header,
+    nav,
+    main>div,
+    footer {
+
+      background-color: gainsboro;
+      margin-bottom: 10px;
+      padding: 30px 10px;
+      /* 30 üstten ve alttan, 10 sağdan ve soldan */
+      text-align: center;
+    }
+
+    nav {
+      padding: 10px;
+    }
+
+    .col1,
+    .col3 {
+      width: 15%;
+    }
+
+    main>div {
+      float: left;
+      padding: 100px 10px;
+    }
+
+    main::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .col2 {
+      width: calc(70% - 20px);
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    /* EKRAN Genişliği MAXİMUM 500PX İSE */
+    /* telefon ekranı mobil görünümü */
+    /* responsive yapmak için @media kullanıyoruz */
+    @media (max-width: 500px) {
+
+      .col1,
+      .col2,
+      .col3 {
+        width: 100%;
+        margin: 0 0 10px 0;
+        /* üst sağ alt sol */
+      }
+    }
+
+    /* Yazıcıdan çıktı alırken header başlığını büyütmek için */
+    @media print {
+      header {
+        text-transform: uppercase;
+      }
+
+      footer {
+        display: none;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <header>Header</header>
+  <nav>Navigation</nav>
+  <main>
+    <div class="col1">Left</div>
+    <div class="col2">Middle</div>
+    <div class="col3">Right</div>
+  </main>
+  <footer>Footer</footer>
+</body>
+
+</html>

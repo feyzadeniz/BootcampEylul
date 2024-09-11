@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Float ile çalışmak ve Float Temizliği</title>
+
+  <style>
+    .hepsi {
+      border: 5px dashed black;
+    }
+
+    .kutu {
+      width: 50px;
+      height: 50px;
+      background-color: orange;
+      color: white;
+      margin: 10px;
+      float: right;
+    }
+
+    /* ÇÖZÜM 1: floatun kesilmesini istediğimiz float eden elemandan sonra boş bir dive bu sınıf verilir*/
+    .temizleyici {
+      clear: both;
+    }
+
+    div.kutu:nth-child(2n) {
+      float: left;
+      /* çift olanları sola dayadık 2n=even */
+    }
+
+    /* ÇÖZÜM2 :  */
+    .hepsi::after {
+      /* hepsi after hepsinin aonrası değil sonu yani hepsi divinin kapanıştan hemen öncesi */
+      content: "";
+      display: block;
+      clear: both;
+      /* Css'de clear özelliği, tanımlanan float özelliğinin iptal edilmesi için kullanılır. Float özelliği kendinden sonra gelen etiketlerin de akışını etkiler, bu etkiyi kaldırmak için float özelliği kullanılan öğeden sonra clear özelliği kullanılır. */
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+  <!-- div.hepsi>div.kutu*12>{Kutu $} --> <!-- nokta koyarak class ayarlamış oluyoruz. -->
+  <div class="hepsi">
+    <div class="kutu">Kutu 1</div>
+    <div class="kutu">Kutu 2</div>
+    <div class="kutu">Kutu 3</div>
+    <div class="kutu">Kutu 4</div>
+    <div class="kutu">Kutu 5</div>
+    <div class="kutu">Kutu 6</div>
+    <div class="kutu">Kutu 7</div>
+    <div class="kutu">Kutu 8</div>
+    <div class="kutu">Kutu 9</div>
+    <div class="kutu">Kutu 10</div>
+    <div class="kutu">Kutu 11</div>
+    <div class="kutu">Kutu 12</div>
+    <!-- <div class="temizleyici"></div> -->
+  </div>
+</body>
+
+</html>
