@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pozisyonlama 2</title>
+  <style>
+    .kutu {
+      background-color: pink;
+      width: 100px;
+      height: 100px;
+      position: relative;
+    }
+
+    .poke {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      /* böyle olunca sayfanın en sağ alt köşesinde görünür */
+      /* bunu atasına relative vererek çözeriz, yani div'e göre hizalanır*/
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Başlık</h1>
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum illo debitis architecto tenetur quos, corrupti
+    deleniti, alias ducimus recusandae sint voluptatum qui odio incidunt eos nulla esse cupiditate excepturi
+    voluptatibus!</p>
+  <div class="kutu">
+    <img class="poke" src="pikachu.png" alt="pikaçu">
+  </div>
+</body>
+
+</html>
