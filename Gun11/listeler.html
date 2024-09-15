@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listeler</title>
+  <style>
+    h4 {
+      margin-bottom: 0;
+      /* başlıkla metni yakınlaştırmak */
+    }
+
+    ul {
+      margin-top: 5px;
+      /* başlıkla metni yaklaştırmak için */
+    }
+
+    .still1 {
+      list-style: none;
+    }
+
+    .still2 {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .still3 {
+      list-style-type: square;
+    }
+
+    .still4 {
+      /* DEFAULT */
+      /* LİST-STYLE-POSİTİON: OUTSİDE; */
+    }
+
+    ul.still4>li {
+      border: 1px solid;
+
+    }
+
+    .still5 {
+
+      list-style-position: inside;
+
+    }
+
+    ul.still5>li {
+      border: 1px solid;
+
+    }
+
+    ul.still6 {
+      list-style: none;
+      list-style-image: url(pikachu.png);
+      /* olmadı */
+    }
+
+    ul.still7>li::marker {
+      color: blue;
+      font-size: 2em;
+    }
+
+    ul.still8 {
+      list-style: none;
+      padding: 0;
+      border: 1px solid gainsboro;
+      border-radius: 8px;
+      overflow: hidden;
+      /* hover sırasında en üst ve en alttaki li'nin köşelerindeki radius taşıyordu. bunu yaparak köşelerdeki taşanı gizledik */
+
+    }
+
+    ul.still8>li {
+      padding: 12px;
+      border-bottom: 1px solid gainsboro;
+    }
+
+    ul.still8>li:last-child {
+      border-bottom: none;
+    }
+
+    ul.still8>li:nth-child(2n) {
+      background-color: #f0f0f0;
+    }
+
+    ul.still8>li:hover {
+
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+<h4>Standart Görünüm</h4>
+<ul class="still3">
+  <li>Cağ Kebabı</li>
+  <li>Lahmacun</li>
+  <li>Döner Dürüm</li>
+  <li>Makarna</li>
+  <li>Mantı</li>
+  <li>Pideli Köfte</li>
+
+  <body>
+    <h4>Marker'sız Liste</h4>
+    <ul class="still1">
+      <li>Cağ Kebabı</li>
+      <li>Lahmacun</li>
+      <li>Döner Dürüm</li>
+      <li>Makarna</li>
+      <li>Mantı</li>
+      <li>Pideli Köfte</li>
+    </ul>
+    <h4>Stillerinden Arındırılmış Liste</h4>
+    <ul class="still2">
+      <li>Cağ Kebabı</li>
+      <li>Lahmacun</li>
+      <li>Döner Dürüm</li>
+      <li>Makarna</li>
+      <li>Mantı</li>
+      <li>Pideli Köfte</li>
+    </ul>
+
+</ul>
+<h4>Marker Pozisyonları dış</h4>
+<ul class="still4">
+  <li>Cağ Kebabı</li>
+  <li>Lahmacun</li>
+  <li>Döner Dürüm</li>
+  <li>Makarna</li>
+  <li>Mantı</li>
+  <li>Pideli Köfte</li>
+</ul>
+<h4>Marker Pozisyonları iç</h4>
+<ul class="still5">
+  <li>Cağ Kebabı</li>
+  <li>Lahmacun</li>
+  <li>Döner Dürüm</li>
+  <li>Makarna</li>
+  <li>Mantı</li>
+  <li>Pideli Köfte</li>
+</ul>
+<h4>Marker Resmi </h4>
+<ul class="still6">
+  <li>Cağ Kebabı</li>
+  <li>Lahmacun</li>
+  <li>Döner Dürüm</li>
+  <li>Makarna</li>
+  <li>Mantı</li>
+  <li>Pideli Köfte</li>
+</ul>
+<h4>Marker Özelleştirme </h4>
+<ul class="still7">
+  <li>Cağ Kebabı</li>
+  <li>Lahmacun</li>
+  <li>Döner Dürüm</li>
+  <li>Makarna</li>
+  <li>Mantı</li>
+  <li>Pideli Köfte</li>
+</ul>
+
+<h4>Extravaganza </h4>
+<ul class="still8">
+  <li>Cağ Kebabı</li>
+  <li>Lahmacun</li>
+  <li>Döner Dürüm</li>
+  <li>Makarna</li>
+  <li>Mantı</li>
+  <li>Pideli Köfte</li>
+</ul>
+
+</body>
+
+</html>
