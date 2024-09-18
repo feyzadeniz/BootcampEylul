@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ölçüler</title>
+
+  <style>
+    html {
+      /* 1 rem'i belirler */
+      /* width ve height miras verilmez ama font size miras verilir */
+      font-size: 20px;
+    }
+
+    .cubuk1 {
+      height: 20px;
+      background-color: purple;
+      width: 96px;
+    }
+
+    .cubuk2 {
+      height: 20px;
+      background-color: lightblue;
+      width: 6rem;
+      /* 1 rem, tarayıcının html için kök elementinin font - size'ına göre hesaplanır. tarayıcının html elementi varsayılan 16px ise 1 rem = 1.16*/
+    }
+
+    .cubuk3 {
+      height: 20px;
+      background-color: pink;
+      width: 6em;
+      /* em bir elementin parent'ından miras aldığı font size'a karşılık gelir. */
+    }
+
+    .cubuk2-kapsayici {
+      font-size: 10px;
+      /* cubuk2 div'i, cubuk2 kapsayicidan değil html'e css yazarken verdiğimiz değeri baz alarak hesap yapar  */
+    }
+
+    .cubuk3-kapsayici {
+      font-size: 10px;
+      /* cubuk3 div'i, cubuk3 kapsayıcıdan 10px'i miras alarak hesaplandı ve küçüldü */
+    }
+  </style>
+
+</head>
+
+<body>
+  <h1>Ölçü Birimleri</h1>
+  <h2>Genişliği 96px olan bir div</h2>
+  <div class="cubuk1"></div>
+  <div class="cubuk2-kapsayici">
+    <h2>Genişliği 6rem olan bir div</h2>
+    <div class="cubuk2"></div>
+  </div>
+  <div class="cubuk3-kapsayici"> <!-- div.cubuk3-kapsayici + tab// class vermek için nokta koyuyoruz -->
+    <h2>Genişliği 6em olan bir div</h2>
+    <div class="cubuk3"></div>
+  </div>
+
+  <hr>
+  <style>
+    .sorı1 {
+      font-size: 4px;
+    }
+
+    .soru1-a {
+      font-size: 1.5em;
+    }
+
+    .sorı1-b {
+      font-size: 1.5em;
+    }
+
+    .sorı1-c {
+      font-size: 1.5em;
+    }
+  </style>
+  <div class="soru1">
+    <div class="soru1-a">
+      <div class="soru1-b">
+        <div class="soru1-c">
+          <!-- bu yazının hesaplaanmış boyutu kaç px'dir?
+           13.5px'dir her divin birbirinden miras almasıyla hesaplandı-->MOLA YAKLAŞIYOR
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

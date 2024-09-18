@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transition</title>
+  <style>
+    .kutu1 {
+      height: 60px;
+      width: 20%;
+      background-color: crimson;
+      margin-bottom: .5rem;
+      transition-property: all;
+      transition-duration: .3s;
+      transition-timing-function: ease-out;
+      /* bitimde yavaşlar */
+      /* linear sabit hız */
+      /* transition-delay: .5s; */
+      /* .5 saniye gecikmeli */
+      color: white;
+      text-align: center;
+      font-size: 18px;
+
+    }
+
+    .kutu1>.text {
+      visibility: hidden;
+    }
+
+
+
+    .kutu1:hover {
+      height: 180px;
+      background-color: orange;
+    }
+
+    .kutu1:hover>.text {
+      visibility: visible;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="kutu1">
+    <div class="text">EMİRHAN FEYZA'YI SEVİYOR</div>
+  </div>
+  <div class="kutu1"></div>
+  <div class="kutu1"></div>
+  <div class="kutu1"></div>
+  <div class="kutu1"></div>
+</body>
+
+</html>
