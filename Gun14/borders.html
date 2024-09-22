@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Borderlar</title>
+  <style>
+    html,
+    body {
+      min-height: 100%;
+    }
+
+    body {
+      background-color: #4158d0;
+      background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    }
+
+    * {
+      box-sizing: border-box;
+
+    }
+
+    div {
+      margin-bottom: 10px;
+    }
+
+    .kutu1 {
+      height: 50px;
+      /*       border-width: 3px;
+      border-color:black ;
+      border-style: solid; */
+      border: 3px solid black;
+    }
+
+    .kutu2 {
+      height: 100px;
+      border-top: 5px dashed green;
+      border-right: 10px dotted red;
+      border-bottom: 15px double blue;
+      border-left: 20px groove orange;
+      /* 3 boyoutlu gibi */
+
+    }
+
+    /* tamamı borderdan oluşsaydı ne olurdu */
+    .kutu3 {
+      width: 100px;
+      height: 100px;
+      border: 50px solid black;
+      /* burada border kutunun içini doldurdu, px değerlerini küçülterek anlayabildim */
+      border-color: yellow brown purple green;
+      /* yellow üst, brown sağ, purple alt, green sol */
+    }
+
+    .kutu4 {
+      width: 100px;
+      height: 100px;
+      border: 50px solid black;
+      border-color: transparent transparent turquoise blue;
+
+    }
+
+    .kutu5 {
+      width: 100px;
+      height: 100px;
+      border-style: solid;
+      border-width: 10px 20px 30px 40px;
+      /* üst sağ alt sol */
+      border-radius: 10px;
+      /* köşeleri yumuşatma */
+      border-color: red green blue yellow;
+    }
+
+    .kutu6 {
+      height: 150px;
+      background-color: #8BC6EC;
+      background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+      border-radius: 50%;
+    }
+
+    .kutu8 {
+      width: 100px;
+      height: 100px;
+      background-color: black;
+      border-radius: 50%;
+    }
+
+    .kutu9 {
+      border: 20px solid transparent;
+      border-image: url(cicek.png) 20 stretch;
+      height: 120px;
+    }
+
+    .kutu10 {
+      background: linear-gradient(135deg, #cf6404, #f6c725 20%, #cf6404 90%, #f6c725);
+      border: 15px solid transparent;
+      border-image: url(cicek.png) 20 round;
+      /* round tekrar ettiriyor gibi gösteriyor sanırım 30 yapınca bölünmüş oluyor*/
+      height: 120px;
+      margin: 20px 10px;
+      /* üst alt, sağ sol */
+      background-clip: padding-box;
+      /* dışarı taşan backgroundu temizledi ve sınırı border yaptı,sadece borderın içini boyadı */
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <div>
+    <div class="kutu1"></div>
+  </div>
+  <div>
+    <div class="kutu2"></div>
+  </div>
+  <div>
+    <div class="kutu3"></div>
+  </div>
+  <div>
+    <div class="kutu4"></div>
+  </div>
+  <div>
+    <div class="kutu5"></div>
+  </div>
+  <div>
+    <div class="kutu6"></div>
+  </div>
+  <div>
+    <div class="kutu7"></div>
+  </div>
+  <div>
+    <div class="kutu8"></div>
+  </div>
+  <div>
+    <div class="kutu9"></div>
+  </div>
+  <div>
+    <div class="kutu10"></div>
+  </div>
+
+</body>
+
+</html>
