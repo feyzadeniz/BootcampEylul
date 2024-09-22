@@ -14,8 +14,21 @@
       flex-direction: row;
       /* row, row reverse, column, column reverse */
       justify-content: space-evenly;
+      /* Bu özellik öğeleri yatay olarak hizalar ve şu değerleri alır:
+      flex-start: Öğeleri flexbox container'ın sol tarafına hizalar.
+      flex-end: Öğeleri flexbox container'ın sağ tarafına hizalar.
+      center: Öğeleri flexbox container'ın ortasına hizalar.
+      space-between: Öğeler eşit aralıklarla yatay şekilde yayılır
+      space-around: Öğeler etraflarında eşit aralıklar olacak şekilde yatay şekilde yayılır */
       align-items: center;
-      /* stretch, center, flex-start, flex-end, baseline */
+      /* Bu CSS kuralı öğeleri dikey olarak hizalar ve şu değerleri alır:
+      flex-start: Öğeleri flexbox container'ın tepesine hizalar
+      flex-end: Öğeleri flexbox container'ın aşağısına hizalar
+      center: Öğeleri flexbox container'ın dikey ortasına hizalar
+      baseline: Öğeleri flexbox container'ın yazı referans çizgisine(baseline) hizalar.
+      stretch: Öğeler flexbox container boyunca uzarlar */
+      /* flex direction kuralı column değerini aldığında, justify-content kuralı dikeyde ve align-items kuralı yatayda çalışır, unutmayın. */
+
     }
 
     .kutu1 {
