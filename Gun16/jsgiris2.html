@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Bölgeleri</title>
+</head>
+
+<body>
+  <h1>JS Giriş 2</h1>
+  <p>Bir HTML dokümanında Javascript'i 3 farklı şekilde dokümana dahil edebiliriz.</p>
+
+  <!-- 1) SCRİPT TAGLARI ARASINDA -->
+  <script>
+    let x = 2 + 2;
+    document.write(x);
+    document.write("<hr>");
+  </script>
+
+  <!-- 2) HARİCİ DOSYA  -->
+  <script src="kod.js"></script>
+  <hr>
+
+  <!-- 3) İNLİNE JS -->
+  <button onclick="alert('BAŞIN GÖĞE ERDİ Mİ?')">BANA TIKLAMA</button>
+  <hr>
+  <button id="minnos" onmouseenter="document.getElementById('minnos').textContent = 'ŞAKA YAPTIM' ">ÜZERİME GELMEYİN
+    BURAYI TERK EDERİM</button> <!-- onmouseenter butonun üzerine gelince/hover gibi -->
+</body>
+
+</html>
