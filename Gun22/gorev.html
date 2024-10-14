@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Görev1</title>
+</head>
+
+<body>
+  <h1>Görev</h1>
+  <ul>
+    <li>6 elemanlı bir sayı dizisi oluştur: 4, 8, 15, 16, 23, 42 </li>
+    <li>başına 10 ekle</li>
+    <li>sonuna 99 ekle</li>
+    <li>2.indeksten başlayarak 3 adet sayı sil</li>
+    <li>3.indekse 77 sayısını sok mevcutlara dokunma</li>
+    <li>2. indeksteki sayıyı güncelle: 66 </li>
+    <li>başını sil ve silineni yazdır</li>
+    <li>sonunu sil ve silineni yazdır</li>
+
+  </ul>
+
+  <script src="../ortak/yaz.js"></script>
+  <script>
+    ciz();
+    let lost = [4, 8, 15, 16, 23, 42];
+    ciz("dizi elemanları " + lost.toString());
+    lost.unshift(10); //başına
+    ciz(lost);
+    lost.push(99); //sonuna
+    lost.splice(2, 3);
+    ciz(lost);
+    lost.splice(3, 0, 77);
+    ciz(lost);
+    lost[2] = 66; //güncelleme
+    ciz(lost);
+    let ilki = lost.shift();
+    ciz("silinen: " + ilki);
+    let sonu = lost.pop();
+    ciz(sonu);
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>
