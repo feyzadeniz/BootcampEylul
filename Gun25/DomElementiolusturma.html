@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Elementi Oluşturma</title>
+</head>
+
+<body>
+
+  <script>
+    //p elementi oluştur
+    const baslik = document.createElement("h1"); //tırnak içinde hangi tagler içinde olmasını istediğimizi belirledik
+    baslik.textContent = "Bir Başlık"; //taglerin içeriğine karar verdik
+    const parag = document.createElement("p");
+    parag.textContent = "hocam hiçbir şey gelmedi aklıma. Javascript öğreniyorum olsun.";
+    //oluşan elementi DOM ağacına eklememiz lazım
+    document.body.append(baslik); //body'e tam olarak eklemiş olduk. artık sitede görünüyor.
+    document.body.append(parag);
+
+    const guclu = document.createElement("strong");
+    guclu.textContent = "Bu cümleyi paragrafın sonuna ekleyemeyeceğimi iddia ettiler."
+    parag.append(guclu); //seçtiğimiz elementin sonuna ekledik
+    const vurgulu = document.createElement("em");
+    vurgulu.textContent = "bilmiyorum hocam.";
+    parag.prepend(vurgulu); //seçtiğimiz elementin başına ekledik
+
+    //başlıktan sonra yatay çizgi
+    const cizgi = document.createElement("hr");
+    baslik.after(cizgi); //after komutu seçtiğimiz elementin sonrasına ekler, before elementi öncesine ekler.
+
+
+    //developer tools üzerinden elementi seç ve properties sekmesinden kontrol et
+    //baslik.abidik = "tencere tava";
+
+
+
+  </script>
+
+
+
+</body>
+
+</html>

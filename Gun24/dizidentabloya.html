@@ -45,19 +45,25 @@
 
     const tbody = document.getElementById("veri");
 
-    let no = 1;
-    for (const kisi of dizi) { /* ters tırnak */
-      tbody.innerHTML += ` 
-    <tr>
-        <th>${no}</th>
-        <td>${kisi.ad}<td>
-        <td>${kisi.yas}</td>
-        <td>${kisi.sehir}</td>
-        <td>${kisi.hobi}</td>
-    </tr>
-    `;
-      no++;
+    for (let i = 0; i < dizi.length; i++) {
+      const no = i + 1;
+      const kisi = dizi[i];
+      const tr = document.createElement("tr");
+      const td1 = document.createElement("td");
+      td1.textContent = no;
+      const td2 = document.createElement("td");
+      td2.textContent = kisi.ad;
+      const td3 = document.createElement("td");
+      td3.textContent = kisi.yas;
+      const td4 = document.createElement("td");
+      td4.textContent = kisi.sehir;
+      const td5 = document.createElement("td");
+      td5.textContent = kisi.hobi;
+      td5.className = "fst-italic"; //bootstrap özelliği
+      tr.append(td1, td2, td3, td4, td5),
+        tbody.append(tr);
     }
+
 
 
   </script>
