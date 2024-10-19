@@ -76,7 +76,8 @@
   frm.addEventListener("submit", function (event) {
     //submit edildiğinde event functionı çağır
     event.preventDefault(); //formu teslim etme, engel ol. event 
-    const ulkeAd = txt.value;
+    let ulkeAd = txt.value;
+    ulkeAd = ulkeAd[0].toLocaleUpperCase("tr") + ulkeAd.substr(1).toLocaleLowerCase("tr"); //baş harfi büyük geri kalanı küçük şekilde eklemek için
     ulkeler.unshift(ulkeAd);
     txt.value = "";
     //görev: listeleme metodu oluştur ve çağır
