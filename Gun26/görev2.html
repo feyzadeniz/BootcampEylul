@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>görev 2</title>
+</head>
+
+<body>
+  <!--GÖREV 2: Bir buton koy ve tıklayınca buton kaybolsun. -->
+  <!-- yöntem1 -->
+  <!-- <button onclick="document.getElementById('button1').style.display = 'none'" id="button1">Beni yok et</button> -->
+
+  <!-- yöntem 2 -->
+  <!-- <button id="buton2">beni tümden yok et</button> -->
+  <script>
+
+    const button = document.getElementById("buton2");
+    button.addEventListener("click", function () {
+      button.remove(); //DOM'dan tümüyle kalkıyor
+    })
+
+
+
+  </script>
+
+  <!-- yöntem 3 : addEventListener yerine onclick property'sini kullan ve  bu property'e atayacağın fonksiyonu --arrow function-- olarak tanımla -->
+
+  <button id="buton3">destroy</button>
+  <script>
+    const btn3 = document.getElementById("buton3");
+    btn3.onclick = () => {
+      btn3.remove();
+    }
+
+  </script>
+
+  <!-- yöntem 4: event parametresini kullanarak -->
+  <button id="btn4">BUT11</button>
+  <script>
+    document.getElementById("btn4").onclick = function (event) {
+      event.target.remove();
+    }
+
+  </script>
+
+  <!-- yöntem 5: event parametresini arrow function ile -->
+  <button id="btn5">tavuk butt'u</button>
+  <script>
+    document.getElementById("btn5").onclick = e => { e.target.remove(); }
+
+  </script>
+
+
+</body>
+
+</html>

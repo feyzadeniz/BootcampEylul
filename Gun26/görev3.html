@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Görev 3</title>
+</head>
+
+<body>
+  <!-- parametre olarak aldığı sayının karesini hesaplayan fonksiyonu arrow function yöntemiyle tanımla ve bir değişkende sakla. Bu fonksiyonu kullanarak birden ona kadar olan sayıların karesi html'de oluşturduğun ul'un içine li'ler halinde ekle -->
+
+  <ul id="liste1">
+
+  </ul>
+</body>
+
+<script>
+  const karesi = x => x * x;
+  const ul1 = document.getElementById("liste1");
+
+  for (let i = 1; i <= 10; i++) {
+    ul1.innerHTML += "<li>" + karesi(i) + "</li>";
+  }
+
+</script>
+
+<ul id="liste2"></ul>
+
+<!-- yöntem 2 Math.pow -->
+<script>
+  const karesiAl = x => Math.pow(x, 2); //pow kuvvet alma
+  const ul2 = document.getElementById("liste2");
+
+  for (let i = 1; i <= 10; i++) {
+    ul2.innerHTML += "<li>" + karesiAl(i) + "</li>";
+    /* ul2.innerHTML += `<li>${karesiAl(i)}</li>`; */
+  }
+
+</script>
+
+<!-- yöntem3  -->
+<ul id="liste3"></ul>
+<script>
+  const kareHesapla = sayi = sayi ** 2;
+  const ul3 = document.getElementsById("liste3");
+
+  for (let i = 1; i <= 10; i++) {
+    const li = document.createElement("li");
+    li.textContent = kareHesapla(i);
+    ul3.appendChild(li);
+  }
+</script>
+
+</html>

@@ -1,0 +1,43 @@
+<!-- görev4 : içinde 1 yazan buton koy, her bastığında değeri 1 artsın. önemli not: biri olur da html üzerinden sayıyı 10 yaparsa program kendini ona göre adapte etsin. yani tıklayınca 11,12,13.. şeklinde artsın. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Görev 4</title>
+</head>
+
+<body>
+
+  <button id="btn">1</button>
+  <button id="btn2">100</button>
+  <button id="btn3">1000</button>
+
+
+</body>
+<script>
+  const btn1 = document.getElementById("btn");
+  btn1.onclick = function () {
+    btn1.textContent = Number(btn1.textContent) + 1;
+    //Number(fonksiyonu stringi sayıya dönüştürür. ParseInt ise sadece integera dönüştürür, number sayıyı küsüratıyla dönüştürür)
+  }
+
+
+  //this keywordünü eventlerde evente konu olan
+  //elemente karşılık gelir ancak arrow functionda işe yaramaz
+  btn2.onclick = function () {
+    this.textContent = Number(this.textContent) + 1;
+
+  }
+
+  //isimli fonksiyon ile
+  function arttir() {
+    this.textContent = Number(this.textContent) + 1;
+
+  }
+  btn3.addEventListener("click", arttir); //bunda birden fazla fonksiyon yazıp peş peşe çalıştırırsak aynı anda birden fazla arttırma yapabiliriz
+  /* btn3.onclick=arttir; */ //bunda ise komut öncekini ezer
+</script>
+
+</html>
