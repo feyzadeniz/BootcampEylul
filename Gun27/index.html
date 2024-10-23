@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yapılacaklar Uygulaması</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.3/slate/bootstrap.min.css"
+    integrity="sha512-3EVe7TjxthzbTGfmRFr7zIvHjDWW7viFDgKOoTJ7S5IIrrKVN5rbPVjj0F7nT6rTyAkURnzwoujxlALvHoO9jw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <form class="row mt-5 gy-2 gx-3 align-items-center">
+      <div class="col">
+        <input type="text" class="form-control" id="task" placeholder="Ne yapacaksın?">
+      </div>
+      <div class="col-auto">
+        <button type="submit" class="btn btn-primary">Ekle</button>
+      </div>
+    </form>
+
+    <div id="todos" class="mt-4 todos">
+      <div class="row mb-3 border border-secondary rounded py-3 px-2 mx-0 bg-primary">
+        <!-- py, y ekseni; px, x ekseni; mx yatay marjin; my dikey marjin; row col muhabbeti ise flexten geliyor. bu değerler 5'e kadar var. bg background color ayarlar. rounded ile köşelere radius verdik -->
+
+        <div class="col-auto">
+          <input type="checkbox">
+        </div>
+        <!-- col auto kendi genişliği kadar yer kaplar, col ise alabildiğine genişler -->
+        <div class="col ps-0 d-flex align-items-center lead">
+          <!-- padding start 0, display:flex; align items center, lead normal yazıya göre bir tık öne çıkarır ama fs ile de font size değiştirebiliriz -->
+          Projeyi tamamla
+        </div>
+
+      </div>
+    </div>
+    <div id="todos" class="mt-4 todos">
+      <div class="row mb-3 border border-secondary rounded py-3 px-2 mx-0 bg-primary">
+        <!-- py, y ekseni; px, x ekseni; mx yatay marjin; my dikey marjin; row col muhabbeti ise flexten geliyor. bu değerler 5'e kadar var. bg background color ayarlar. rounded ile köşelere radius verdik -->
+
+        <div class="col-auto">
+          <input type="checkbox">
+        </div>
+        <!-- col auto kendi genişliği kadar yer kaplar, col ise alabildiğine genişler -->
+        <div class="col ps-0 d-flex align-items-center lead">
+          <!-- padding start 0, display:flex; align items center, lead normal yazıya göre bir tık öne çıkarır ama fs ile de font size değiştirebiliriz -->
+          Yürüyüş yap
+        </div>
+
+      </div>
+      <div id="todos" class="mt-4 todos">
+        <div class="row mb-3 border border-secondary rounded py-3 px-2 mx-0 bg-primary">
+          <!-- py, y ekseni; px, x ekseni; mx yatay marjin; my dikey marjin; row col muhabbeti ise flexten geliyor. bu değerler 5'e kadar var. bg background color ayarlar. rounded ile köşelere radius verdik -->
+
+          <div class="col-auto">
+            <input type="checkbox" checked>
+          </div>
+          <!-- col auto kendi genişliği kadar yer kaplar, col ise alabildiğine genişler -->
+          <div class="col ps-0 d-flex align-items-center lead">
+            <!-- padding start 0, display:flex; align items center, lead normal yazıya göre bir tık öne çıkarır ama fs ile de font size değiştirebiliriz -->
+            Faturaları öde
+          </div>
+
+        </div>
+        <div id="todos" class="mt-4 todos">
+          <div class="row mb-3 border border-secondary rounded py-3 px-2 mx-0 bg-primary">
+            <!-- py, y ekseni; px, x ekseni; mx yatay marjin; my dikey marjin; row col muhabbeti ise flexten geliyor. bu değerler 5'e kadar var. bg background color ayarlar. rounded ile köşelere radius verdik -->
+
+            <div class="col-auto">
+              <input type="checkbox" checked>
+            </div>
+            <!-- col auto kendi genişliği kadar yer kaplar, col ise alabildiğine genişler -->
+            <div class="col ps-0 d-flex align-items-center lead">
+              <!-- padding start 0, display:flex; align items center, lead normal yazıya göre bir tık öne çıkarır ama fs ile de font size değiştirebiliriz -->
+              Vitaminlerini al
+            </div>
+
+          </div>
+        </div>
+
+</body>
+
+</html>
