@@ -4,3 +4,7 @@
   vertical-align: middle;
   /* butonu ortaya getirdik */
 }
+
+.done .todo-title {
+  text-decoration: line-through;
+}
